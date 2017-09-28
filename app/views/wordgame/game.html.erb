@@ -1,0 +1,35 @@
+<h1>Wordgame#game</h1>
+<p>Find me in app/views/wordgame/game.html.erb</p>
+
+
+
+<h1>******** Welcome to the longest word-game!********" </h1>
+<h1>"Here is your grid: </h1>
+<%= @grid %>
+<qr>
+
+
+
+<h1> "What's your best shot?" </h1>
+
+<form action="/score">
+  <label for="attempt">Try the game !</label>
+  <input type="text" id="question" name="attempt" placeholder="your attempt...">
+  <input type="hidden" value=<%=@grid%> name="grid">
+  <input type="hidden" value=<%=@start_time%> name="start_time">
+  <input type="hidden" value=<%=@end_time%> name="end_time">
+  <input type="submit" value="Go on!">
+</form>
+
+<%@end_time = Time.now%>
+
+
+
+<!-- start_time = Time.now
+attempt = gets.chomp
+end_time = Time.now
+
+
+
+---lien vers score
+ -->
